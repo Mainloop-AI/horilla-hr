@@ -11,7 +11,7 @@ on:
 
 jobs:
   smoke:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2604
     timeout-minutes: 60
 
     # Production runs PostgreSQL (psycopg2-binary is pinned in
