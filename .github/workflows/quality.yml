@@ -12,7 +12,7 @@ on:
 
 jobs:
   lint-and-check:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2604
     timeout-minutes: 15
 
     steps:
@@ -71,7 +71,7 @@ jobs:
     # Dependency CVEs were only ever caught by the container image scan, which
     # is advisory on PRs -- so a vulnerable pin could merge and only surface at
     # release. This checks requirements.txt directly.
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2604
     timeout-minutes: 10
 
     steps:
@@ -100,7 +100,7 @@ jobs:
   secret-scan:
     # AWS and WhatsApp credentials have reached this repo's git history before,
     # so this is a re-occurrence guard, not a hypothetical.
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2604
     timeout-minutes: 10
 
     steps:
@@ -154,7 +154,7 @@ jobs:
             }
 
   production-settings-gate:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2604
     timeout-minutes: 10
 
     steps:
